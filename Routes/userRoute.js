@@ -5,6 +5,8 @@ const auth=require('../middleware/auth')
 const router= new express.Router();
 
 // API for signup 
+//can be tested using postman
+//{"username":"xyz","email":"x@gmail.com","password":"123"}
 router.post('/user/signup',async (req,res)=>
 { 
 
@@ -41,6 +43,8 @@ router.post('/user/signup',async (req,res)=>
 
 //API for sign in
 // auth is a middleware to authenticate using token for valid user
+//can be tested using postman
+//{"username":"xyz","password":"123"}
 router.post('/user/login',auth,(req,res)=>
 { 
     console.log("insie login")
